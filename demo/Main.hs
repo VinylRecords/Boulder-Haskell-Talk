@@ -166,7 +166,3 @@ main = scotty 3000 $ do
     liftIO . modifyIORef songsR $ (:) song
     json . renderJSON jsonRenderer $ song
 
-
-test :: PlainRec ElS [UId, UId]
-test = SUId =: "asdfasdf"
-  <+> SUId =: "xxx"
