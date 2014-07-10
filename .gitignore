@@ -5,3 +5,8 @@
 *.toc
 *.nav
 *.vrb
+.cabal-sandbox
+cabal.sandbox.config
+dist
+build
+

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl --silent $@ | python -mjson.tool | pygmentize -l javascript
