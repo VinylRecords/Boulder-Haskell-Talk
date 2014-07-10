@@ -152,7 +152,7 @@ main = scotty 3000 $ do
        $  SUId  <-: liftIO generateUId
       <+> SName <-: param "name"
     liftIO . modifyIORef artistsR $ (:) artist
-    json . renderItem $ artist
+    json $ renderItem artist
 
   post "/songs" $ do
     song <- rdist
@@ -164,5 +164,5 @@ main = scotty 3000 $ do
               fmap Right . findByUId aid
       <+> SGenre  <-: param "genre"
     liftIO . modifyIORef songsR $ (:) song
-    json . renderItem $ song
+    json $ renderItem song
 
