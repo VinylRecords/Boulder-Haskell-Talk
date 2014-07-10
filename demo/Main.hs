@@ -164,5 +164,5 @@ main = scotty 3000 $ do
               fmap Right . findByUId aid
       <+> SGenre  <-: param "genre"
     liftIO . modifyIORef songsR $ (:) song
-    json . renderJSON jsonRenderer $ song
+    json . renderItem $ song
 
